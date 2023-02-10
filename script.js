@@ -1,12 +1,3 @@
-// psuedo code
-
-// Generate a password when the button is clicked
-// * Present a series of prompts for password criteria
-
-//  * Length of password:
-// At least 10 characters but no more than 64.
-//Prompt : How long would you like your password to be ? (10-64)
-
 var passwordLength = prompt ("how long would your password be?")
 
 console.log(passwordLength);
@@ -15,35 +6,33 @@ console.log("well done!It's a number");
 } else {
   console.log("you need to select a number");
 }
-// Validation:
-// Ensure that input is numerical and falls within the required specification.
+var passwordIncludeLowercase = confirm ("do you want your password to include lower case?")
 
-  // * Character types
+ var passwordIncludeUppercase = confirm ("do you want your password to include uppercase?")
 
-   //  * Lowercase
-    // confirm Prompt: Do you want lowercase in your password?
+var passwordIncludeNumbers = confirm ("do you want your password to include numbers?")
 
-   // * Uppercase
-   // Confirm prompt: Do you want uppercase character in your password?
+var passwordIncludeSpecialcharacter = confirm ("do you want your password to include special character?")
 
-   //  * Numeric
-   // confirm Prompt: Do you want numeric character in your password?
+var passwordMinimumRequirement = confirm ("do you want minimum requirement ? ")
 
-    // * Special characters ($@%&*, etc)
-    // confirm prompt : do you want Special character in your password?
+// if they chose lower allow
+// add all the lower case nums to available option
 
-// * Code should validate for each input and at least one character type should be selected
-// minimum requirement> length of character and at least one character type
+var  hasPasswordOptionsSelected = hasPasswordOptionsSelected
+var generatedPasswordArray = [];
+  for (let index = 0; index < generatedPasswordArray.length; index++) {
 
-// * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
-// 
+    generatedPasswordArray.push(generatedPassword[index]);
+  }
+  
+  let userPasswordOptions = new userPasswordOptions();{   
 
-// Array of special characters to be included in password
-
-
-
-
-
+       userPasswordOptions.hasPasswordOptionsSelected = false;
+  }
+ 
+const newLocal = [];
+var availableOptions = newLocal
 
 var specialCharacters = [
   '@',
@@ -71,10 +60,8 @@ var specialCharacters = [
   '.'
 ];
 
-// Array of numeric characters to be included in password
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-// Array of lowercase characters to be included in password
 var lowerCasedCharacters = [
   'a',
   'b',
@@ -104,7 +91,6 @@ var lowerCasedCharacters = [
   'z'
 ];
 
-// Array of uppercase characters to be included in password
 var upperCasedCharacters = [
   'A',
   'B',
@@ -134,31 +120,64 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
-function getPasswordOptions() {
+// function getPasswordOptions() {}
 
-}
+// function getRandom() {
+//   // create a random number
+//   // return that number
+// }
 
-// Function for getting a random element from an array
-function getRandom(arr) {
+function generatePassword() {}
 
-}
-
-// Function to generate password with user input
-function generatePassword() {
-
-}
-
-// Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
+  
+  passwordText.value = password
+  generateBtn.addEventListener('click'), (writePassword);
 
-  passwordText.value = password;
 }
 
-// Add event listener to generate button
+
+function getPasswordOptions() {
+  console.log(passPrompt);
+  while (isNaN(passPrompt) || passPrompt < 10 || passPrompt > 65) {
+    if (passPrompt === null || passPrompt < 10 || passPrompt > 65) {
+      return;
+    }
+    alert("Please enter a value between 10 and 65.");
+    passPrompt = prompt("How many characters would you like your password to be?");
+  }
+  var randomizedGeneratedPasswordArray = generatedPasswordArray.sort(function (a, b) { return 0.5 - Math.random() })
+  return randomizedGeneratedPasswordArray.join('');
+}
+
+getPasswordOptions();
+function getRandom(arr) {
+  return arr[Math.floor(Math.random() * array.length)];
+}
+function writePassword() {
+  password = generatePassword();
+  var passwordText = document.querySelector('#password');
+  passwordText.value = password;
+}
+function writePassword() {
+  getPasswordOptions();
+}
+
+var generatedPasswordArray = [];
+  for (let index = 0; index < generatedPassword.length; index++) {
+    generatedPasswordArray.push(generatedPassword[index]);
+  
+  }
 generateBtn.addEventListener('click', writePassword);
+
+  var passwordText = document.querySelector('#password');
+  
+  function writePassword() {
+    password = generatePassword();
+    var passwordText = document.querySelector('#password');
+  }
+    
